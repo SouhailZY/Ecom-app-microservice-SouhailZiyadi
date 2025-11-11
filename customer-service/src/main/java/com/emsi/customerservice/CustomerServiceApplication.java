@@ -21,13 +21,16 @@ public class CustomerServiceApplication {
     CommandLineRunner init(CustomerRepository customerRepository) {
         return args -> {
             customerRepository.save(Customer.builder()
-                    .name("ahmed").email("ahmed@gmail.com")
+                    .name("souhail").email("souhail@gmail.com")
                     .build());
             customerRepository.save(Customer.builder()
-                    .name("Aadam").email("Adam@gmail.com")
+                    .name("Adnane").email("Adnane@gmail.com")
                     .build());
             customerRepository.save(Customer.builder()
-                    .name("Youssef").email("Youssef@gmail.com")
+                    .name("Reda").email("Reda@gmail.com")
+                    .build());
+            customerRepository.save(Customer.builder()
+                    .name("Mouad").email("mouad@gmail.com")
                     .build());
             customerRepository.findAll().forEach(c->{
                 System.out.println("========================");
